@@ -2,7 +2,7 @@
 
 Simple example of portfolio...
 
-[Live version](https://dmitryshabanov.github.io/portfolio/)
+[Live version](https://dmitryshabanov.github.io/Portfolio/)
 
 ## Install & build
 
