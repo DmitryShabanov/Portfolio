@@ -97,6 +97,32 @@
   }
 }
 
+.portfolio__zoomBgIncrease {
+  animation: bgOpacityIncrease .5s ease-in;
+}
+
+.portfolio__zoomBgDecrease {
+  animation: bgOpacityDecrease .5s ease-in;
+}
+
+@keyframes bgOpacityIncrease {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .8;
+  }
+}
+
+@keyframes bgOpacityDecrease {
+  from {
+    opacity: .8;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .portfolio__close-button {
   position: absolute;
 
@@ -107,12 +133,12 @@
   transition: all .25s;
   text-align: center;
 
-  color: #000;
+  color: #e0e0e0;
   border: 1px solid #666;
   border-radius: 50%;
   background-color: #ff4d4d;
 
-  font-size: 1px;
+  font-size: 0;
   font-weight: 700;
 
   @media screen and (min-width: $breakpoint-tablet) {

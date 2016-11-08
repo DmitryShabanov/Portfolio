@@ -20,11 +20,15 @@ function zoomIncrease(workNumber) {
   zoomImage[0].classList.add('portfolio__zoomIncrease');
   zoomDecreaseButton[0].classList.remove('portfolio__zoomDecrease');
   zoomDecreaseButton[0].classList.add('portfolio__zoomIncrease');
+  zoomBackground[0].classList.remove('portfolio__zoomBgDecrease');
+  zoomBackground[0].classList.add('portfolio__zoomBgIncrease');
 
   zoomImage[0].style.backgroundImage = works[workNumber].style.backgroundImage;
   zoomImage[0].style.display = 'block';
   zoomBackground[0].style.display = 'block';
   zoomDecreaseButton[0].style.display = 'block';
+
+  zoomBackground[0].addEventListener('click', zoomDecrease);
 }
 
 function zoomDecrease() {
@@ -32,6 +36,8 @@ function zoomDecrease() {
   zoomImage[0].classList.add('portfolio__zoomDecrease');
   zoomDecreaseButton[0].classList.remove('portfolio__zoomIncrease');
   zoomDecreaseButton[0].classList.add('portfolio__zoomDecrease');
+  zoomBackground[0].classList.remove('portfolio__zoomBgIncrease');
+  zoomBackground[0].classList.add('portfolio__zoomBgDecrease');
 
   setTimeout(() => {
     zoomImage[0].style.display = 'none';
