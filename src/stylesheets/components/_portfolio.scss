@@ -129,55 +129,6 @@
   }
 }
 
-.portfolio__close-button {
-  position: absolute;
-
-  display: none;
-
-  box-sizing: border-box;
-
-  transition: all .25s;
-  text-align: center;
-
-  color: #e0e0e0;
-  border: 1px solid #666;
-  border-radius: 50%;
-  background-color: #ff4d4d;
-
-  font-size: 0;
-  font-weight: 700;
-
-  @media screen and (min-width: $breakpoint-tablet) {
-    top: -8px;
-    right: 12px;
-
-    width: 16px;
-    height: 16px;
-  }
-
-  @media screen and (min-width: $breakpoint-desktop) {
-    top: -11px;
-    right: 16px;
-
-    width: 22px;
-    height: 22px;
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    @media screen and (min-width: $breakpoint-tablet) {
-      font-size: 8px;
-      line-height: 14px;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-      font-size: 12px;
-      line-height: 20px;
-    }
-  }
-}
-
 .works {
   margin-top: 65px;
 
@@ -291,14 +242,30 @@
 
   &:hover {
     cursor: pointer;
+    // color: $hover-portfolio-item;
 
-    color: $hover-portfolio-item;
     background-color: #fff;
   }
 }
 
 .work__zoom {
+  background: url(../images/zoom.svg) no-repeat center;
+  background-size: 15px;
+
+  &:hover {
+    background-image: url(../images/zoom-hover.svg);
+  }
+
   @media screen and (max-width: $breakpoint-tablet - 1) {
     display: none;
+  }
+}
+
+.work__link {
+  background: url(../images/link.svg) no-repeat center;
+  background-size: 15px;
+
+  &:hover {
+    background-image: url(../images/link-hover.svg);
   }
 }
